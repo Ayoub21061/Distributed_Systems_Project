@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: photo-service
+  namespace: dev 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: photo-service
+  template:
+    metadata:
+      labels:
+        app: photo-service
+    spec:
+      containers:
+      - name: photo-service
+        image: photo-service:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /health 
+            port: 8080
