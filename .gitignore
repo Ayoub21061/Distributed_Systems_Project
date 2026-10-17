@@ -3,4 +3,7 @@ __pycache__/
 .pytest_cache/
 .env
 .DS_Store
+.vscode/codes.txt
+.vscode
 .vscode/
+.DS_Store
