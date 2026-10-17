@@ -14,4 +14,4 @@ patches:
     name: photo-service
 images:
 - name: photo-service
-  newTag: essai4
+  newTag: v1
