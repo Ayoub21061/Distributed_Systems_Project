@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return jsonify(message="Welcome to this photo-storage app",
+    return jsonify(message="It's not a test",
                    pod=socket.gethostname())
 
 @app.route('/health')
